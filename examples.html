@@ -100,14 +100,14 @@
    <figure>
       <figcaption>Example JavaScript</figcaption>
       <pre><code class=language-javascript>
-         var help = {
+         const help = {
             selector: '.help-me',
             show: function(event) {
-               var msg = $(event.target).data('msg');
+               const msg = $(event.target).data('msg');
                $('#msg').text(msg).show().fadeOut(2000);
                },
             setup: function() {
-               $(app.help.selector).click(app.help.show);
+               $(document).on({ click: help.show }, help.selector);
                }
             };
          $(help.setup);
@@ -120,10 +120,10 @@
          &lt;!-- Slide --&gt;
          &lt;section&gt;
             &lt;h3&gt;Images and Arrows&lt;/h3&gt;
-            &lt;img class=prime data-width=5% alt=logo src=logo.png&gt;
+            &lt;img class=prime data-width=5% src=logo.png alt=logo&gt;
             &lt;div class=down-arrow&gt;&lt;/div&gt;
-            &lt;img class=prime data-x=a,2.3 data-width=20% alt=logo
-               src=https://dnajs.org/graphics/dnajs-logo.png&gt;
+            &lt;img class=prime data-x=a,2.3 data-width=20%
+               src=https://dnajs.org/graphics/dnajs-logo.png alt=logo&gt;
          &lt;/section&gt;
       </code></pre>
    </figure>
