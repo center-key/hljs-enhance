@@ -1,0 +1,42 @@
+Paste HTML below into the <head> section (after loading jQuery):
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!--  hljs-enhance                                                         -->
+<!--  ============                                                         -->
+<!--  Adds a little extra stuff to highlight.js                            -->
+<!--  Stuff:                                                               -->
+<!--     1) Normalizes code indent to first column of display box          -->
+<!--     2) Trims whitespace around code                                   -->
+<!--     3) Adds border with option for caption (<figcaption>)             -->
+<!--     4) Adds hover effect to syntax highlighting                       -->
+<!--                                                                       -->
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12/build/styles/docco.min.css>
+<link rel=stylesheet href=https://centerkey.com/files/hljs-enhance/hljs-enhance.css>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12/build/highlight.min.js></script>
+<script src=https://centerkey.com/files/hljs-enhance/hljs-enhance.js></script>
+<!--                                                                       -->
+<!--  Style theme listing (and example css filenames):                     -->
+<!--     https://highlightjs.org/static/test.html                          -->
+<!--     default.min.css, dark.min.css, obsidian.min.css, zenburn.min.css  -->
+<!--     Example conversion of theme name to css filename:                 -->
+<!--        "Atelier Dun - Dark" ==> "atelier-dune.dark.min.css"           -->
+<!--  Usage (simple):                                                      -->
+<!--     <pre><code class=language-javascript>                             -->
+<!--        console.log('Hello');                                          -->
+<!--     </code></pre>                                                     -->
+<!--  Usage (with caption):                                                -->
+<!--     <figure>                                                          -->
+<!--        <figcaption>Hello Message</figcaption>                         -->
+<!--        <pre><code class=language-javascript>                          -->
+<!--           console.log('Hello');                                       -->
+<!--        </code></pre>                                                  -->
+<!--     </figure>                                                         -->
+<!--  Example languages:                                                   -->
+<!--     javascript, html, css, less                                       -->
+<!--  For showing HTML code, first encode at:                              -->
+<!--     https://www.convertstring.com/EncodeDecode/HtmlEncode             -->
+<!--  No CDNs:                                                             -->
+<!--     To make your webpage self-contained, download the four CSS and    -->
+<!--     JS files and change the four links be relative.                   -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
