@@ -1,0 +1,50 @@
+/* hljs-enhance - https://github.com/center-key/hljs-enhance - MIT License */
+figure.hljs-enhance {
+   text-align: left;
+   margin: 0px auto 20px auto;
+   }
+figure.hljs-enhance figcaption {
+   font-size: 0.9rem;  /* caption font size */
+   font-weight: bold;
+   padding: 0.32em 0px 0.0em 18px;
+   }
+pre.hljs-enhance,
+figure.hljs-enhance >div {
+   border: 3px solid;
+   }
+figure.hljs-enhance pre {
+   margin: 0px;
+   }
+pre.hljs-enhance {
+   margin: 0px 0px 20px 0px;
+   }
+pre.hljs-enhance code,
+figure.hljs-enhance >div {
+   padding: 0.8em 0px 0.8em 15px;
+   }
+pre.hljs-enhance code {
+   font-size: 0.9rem;  /* code font size */
+   font-family: menlo, consolas, monospace;
+   line-height: 1.3em;
+   }
+pre.hljs-enhance code >span {
+   outline: 3px solid transparent;
+   transition: outline 0.4s;
+   }
+pre.hljs-enhance code >span:hover {
+   outline-color: gold;
+   }
+.hljs-tag .hljs-title {
+   color: darkred;
+   }
+.hljs-tag .hljs-attribute {
+   color: navy;
+   }
+@media (max-width: 667px) {  /* selects iPhone 6/6s/7/8 landscape and anything narrower */
+   pre.hljs-enhance code { font-size: 0.6rem; }
+   }
+
+/* hljs-enhance frame colors */
+figure.hljs-enhance figcaption { color: darkslategray; }                          /* title color */
+figure.hljs-enhance figcaption:first-child { background-color: lightsteelblue; }  /* trim color */
+pre.hljs-enhance, figure.hljs-enhance >div {     border-color: lightsteelblue; }  /* trim color */
