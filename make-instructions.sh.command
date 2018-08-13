@@ -12,7 +12,7 @@ projectHome=$(cd $(dirname $0); pwd)
 
 generateInstructions() {
    cd $projectHome
-   echo "Paste HTML below into the <head> section (after loading jQuery):\n" > $instructionsFile
+   echo "Paste the HTML below into the <head> section (after loading jQuery):\n" > $instructionsFile
    startLine=$(grep -n "\!\-\- \-" $htmlFile | head -1 | sed s/:.*//)
    endLine=$(grep -n "</head>"  $htmlFile | sed s/:.*//)
    head -$endLine < $htmlFile | sed '$d' | tail -n +$startLine >> $instructionsFile
@@ -48,6 +48,9 @@ openBrowser() {
    echo
    }
 
+echo
+echo "hljs-enhance"
+echo "============"
 generateInstructions
 publishWebFiles
 openBrowser
