@@ -6,9 +6,19 @@
 # To make this file runnable:
 #     $ chmod +x *.sh.command
 
+banner="hljs-enhance"
 htmlFile=examples.html
 instructionsFile=instructions.txt
 projectHome=$(cd $(dirname $0); pwd)
+
+displayIntro() {
+   cd $projectHome
+   echo
+   echo $banner
+   echo $(echo $banner | sed -e "s/./=/g")
+   pwd
+   echo
+   }
 
 generateInstructions() {
    cd $projectHome
@@ -48,9 +58,7 @@ openBrowser() {
    echo
    }
 
-echo
-echo "hljs-enhance"
-echo "============"
+displayIntro
 generateInstructions
 publishWebFiles
 openBrowser
