@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ################
 # hljs-enhance #
 ################
@@ -22,7 +22,7 @@ displayIntro() {
 
 generateInstructions() {
    cd $projectHome
-   echo "Paste the HTML below into the <head> section (after loading jQuery):\n" > $instructionsFile
+   echo -e "Paste the HTML below into the <head> section (after loading jQuery):\n" > $instructionsFile
    startLine=$(grep -n "\!\-\- \-" $htmlFile | head -1 | sed s/:.*//)
    endLine=$(grep -n "</head>"  $htmlFile | sed s/:.*//)
    head -$endLine < $htmlFile | sed '$d' | tail -n +$startLine >> $instructionsFile
