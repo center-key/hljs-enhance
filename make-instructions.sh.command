@@ -43,8 +43,8 @@ publishWebFiles() {
       mkdir -p $publishFolder
       cp -v hljs-enhance.* examples.html $publishFolder
       msg="\n/* Published: $(date) */"
-      echo $msg >> $publishFolder/hljs-enhance.css
-      echo $msg >> $publishFolder/hljs-enhance.js
+      echo -e $msg >> $publishFolder/hljs-enhance.css
+      echo -e $msg >> $publishFolder/hljs-enhance.js
       echo
       }
    test -w $publishSite && publish
