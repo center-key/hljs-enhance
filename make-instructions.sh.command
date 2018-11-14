@@ -73,7 +73,7 @@ releaseInstructions() {
    }
 
 creatLocalToCdnSubsitution() {
-   cdnUri=https://centerkey.com/hljs-enhance
+   cdnUri=https://cdn.jsdelivr.net/npm/hljs-enhance@0.0
    localToCdn="s#=hljs-enhance[.]#=$cdnUri/hljs-enhance.#g"
    }
 
