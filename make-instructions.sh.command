@@ -106,7 +106,7 @@ publishWebFiles() {
       echo "Publishing:"
       echo $publishFolder
       mkdir -p $publishFolder
-      sed $localToCdn spec.html > $publishFolder/index.html
+      sed $localToCdn spec.html > $publishFolder/examples.html
       ls -o $publishFolder
       echo
       }
