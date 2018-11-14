@@ -1,0 +1,34 @@
+{
+   "name": "hljs-enhance",
+   "version": "0.0.1",
+   "description": "Adds a little extra stuff to highlight.js",
+   "license": "MIT",
+   "main": "hljs-enhance.js",
+   "repository": "github:center-key/hljs-enhance",
+   "homepage": "https://github.com/center-key/hljs-enhance",
+   "bugs": "https://github.com/center-key/hljs-enhance/issues",
+   "docs": "https://github.com/center-key/hljs-enhance#readme",
+   "author": "Center Key (https://centerkey.com)",
+   "keywords": [
+      "highlightjs",
+      "javascript",
+      "syntax-highlighting"
+   ],
+   "jshintConfig": {
+      "esversion": 6,
+      "strict": "implied",
+      "undef": true,
+      "unused": true,
+      "browser": true,
+      "jquery": true
+   },
+   "scripts": {
+      "test": "jshint hljs-enhance.js"
+   },
+   "devDependencies": {
+      "dna.js": "~1.4",
+      "jquery": "~3.3",
+      "jshint": "~2.9",
+      "web-ignition": "~0.0"
+   }
+}
