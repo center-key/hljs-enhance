@@ -10,7 +10,7 @@ _Adds a little extra stuff to highlight.js_
 1. Adds hover effect to syntax highlighting
 
 ### Try it:
-[examples.html](https://centerkey.com/hljs-enhance/examples.html)
+[https://centerkey.com/hljs-enhance](https://centerkey.com/hljs-enhance/)
 
 ### Use it:
 [instructions.txt](instructions.txt)

@@ -7,7 +7,6 @@
 #     $ chmod +x *.sh.command
 
 banner="hljs-enhance"
-htmlFile=examples.html
 instructionsFile=instructions.txt
 projectHome=$(cd $(dirname $0); pwd)
 
@@ -20,12 +19,18 @@ displayIntro() {
    echo
    }
 
+creatLocalToCdnSubsitution() {
+   cdnUri=https://centerkey.com/hljs-enhance
+   localToCdn="s#=hljs-enhance[.]#=$cdnUri/hljs-enhance.#g"
+   }
+
 generateInstructions() {
    cd $projectHome
    echo -e "Paste the HTML below into the <head> section (after loading jQuery):\n" > $instructionsFile
-   startLine=$(grep -n "\!\-\- \-" $htmlFile | head -1 | sed s/:.*//)
-   endLine=$(grep -n "</head>"  $htmlFile | sed s/:.*//)
-   head -$endLine < $htmlFile | sed '$d' | tail -n +$startLine >> $instructionsFile
+   startLine=$(grep --line-number "\!\-\- \-" spec.html | head -1 | sed s/[^0-9]//g)
+   endLine=$(($(grep --line-number "</head>" spec.html | sed s/[^0-9]//g) - 2))
+   creatLocalToCdnSubsitution
+   sed $localToCdn spec.html | head -$endLine | tail -n +$startLine  >> $instructionsFile
    cat $instructionsFile
    echo
    pwd
@@ -35,16 +40,15 @@ generateInstructions() {
 
 publishWebFiles() {
    cd $projectHome
-   publishWebRoot=$(grep ^DocumentRoot /private/etc/apache2/httpd.conf | awk -F\" '{ print $2 }')
+   publishWebRoot=$(grep ^DocumentRoot /private/etc/apache2/httpd.conf | awk -F'"' '{ print $2 }')
    publishSite=$publishWebRoot/centerkey.com
    publishFolder=$publishSite/hljs-enhance
    publish() {
       echo "Publishing:"
+      echo $publishFolder
       mkdir -p $publishFolder
-      cp -v hljs-enhance.* examples.html $publishFolder
-      msg="\n/* Published: $(date) */"
-      echo -e $msg >> $publishFolder/hljs-enhance.css
-      echo -e $msg >> $publishFolder/hljs-enhance.js
+      sed $localToCdn spec.html > $publishFolder/index.html
+      ls -o $publishFolder
       echo
       }
    test -w $publishSite && publish
@@ -52,9 +56,9 @@ publishWebFiles() {
 
 openBrowser() {
    cd $projectHome
-   echo "Opening examples.html"
+   echo "Opening spec.html"
    sleep 2
-   open examples.html
+   open spec.html
    echo
    }
 

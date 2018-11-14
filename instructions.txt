@@ -35,8 +35,4 @@ Paste the HTML below into the <head> section (after loading jQuery):
 <!--     javascript, html, css, less                                       -->
 <!--  For showing HTML code, first encode at:                              -->
 <!--     https://www.convertstring.com/EncodeDecode/HtmlEncode             -->
-<!--  No CDNs:                                                             -->
-<!--     To make your webpage self-contained, download the four CSS and    -->
-<!--     JS files and change the four links be relative.                   -->
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
