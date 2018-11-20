@@ -45,7 +45,7 @@ pre.hljs-enhance >code >span:hover {
    }
 
 /* Customize hljs-enhance frame colors */
-figure.hljs-enhance >figcaption                        { color: darkslategray; }   /* title */
+figure.hljs-enhance >figcaption             { color:            darkslategray; }   /* title */
 figure.hljs-enhance >figcaption:first-child { background-color: lightsteelblue; }  /* trim */
-pre.hljs-enhance, figure.hljs-enhance >div      { border-color: lightsteelblue; }  /* trim */
+pre.hljs-enhance, figure.hljs-enhance >div  { border-color:     lightsteelblue; }  /* trim */
 pre.hljs-enhance >code                      { background-color: ghostwhite; }      /* background */
