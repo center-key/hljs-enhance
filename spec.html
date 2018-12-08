@@ -4,8 +4,8 @@
 <meta charset=utf-8>
 <title>hljs-enhance &bull; Adds a little extra stuff to highlight.js</title>
 <link rel=icon       href=https://centerkey.com/graphics/bookmark.png>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.3/css/all.min.css>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/web-ignition@0.0/dist/reset.min.css>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6/css/all.min.css>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/web-ignition@1.0/dist/reset.min.css>
 <script src=https://cdn.jsdelivr.net/npm/jquery@3.3/dist/jquery.min.js></script>
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -92,11 +92,11 @@
       <pre><code class=language-javascript>
          const help = {
             selector: '.help-me',
-            show: function(event) {
+            show: (event) =&gt; {
                const msg = $(event.target).data('msg');
                $('#msg').text(msg).show().fadeOut(2000);
                },
-            setup: function() {
+            setup: () => {
                $(document).on({ click: help.show }, help.selector);
                }
             };
@@ -137,7 +137,7 @@
    </p>
 </footer>
 
-<script src=https://cdn.jsdelivr.net/npm/dna.js@1.4/dna.min.js></script>
-<script src=https://cdn.jsdelivr.net/npm/web-ignition@0.0/dist/library.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/dna.js@1.5/dist/dna.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/web-ignition@1.0/dist/library.min.js></script>
 </body>
 </html>

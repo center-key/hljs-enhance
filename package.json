@@ -26,10 +26,10 @@
       "test": "jshint hljs-enhance.js"
    },
    "devDependencies": {
-      "dna.js": "~1.4",
+      "dna.js": "~1.5",
       "highlight.js": "~9.13",
       "jquery": "~3.3",
       "jshint": "~2.9",
-      "web-ignition": "~0.0"
+      "web-ignition": "~1.0"
    }
 }
