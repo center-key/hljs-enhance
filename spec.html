@@ -96,7 +96,7 @@
                const msg = $(event.target).data('msg');
                $('#msg').text(msg).show().fadeOut(2000);
                },
-            setup: () => {
+            setup: () =&gt; {
                $(document).on({ click: help.show }, help.selector);
                }
             };
