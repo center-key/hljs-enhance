@@ -5,7 +5,7 @@ const hljsEnhance = {
          elem = $(elem);
          const indent = '   ';
          const padding = new RegExp(elem.text().match(/\n[ \t]+/), 'g');
-         elem.text($.trim(elem.text().replace(padding, '\n').replace(/\t/g, indent)));
+         elem.text(elem.text().replace(padding, '\n').replace(/\t/g, indent).trim());
          elem.parent().addClass('hljs-enhance').closest('figure').addClass('hljs-enhance');
          window.hljs.highlightBlock(elem[0]);
          };
