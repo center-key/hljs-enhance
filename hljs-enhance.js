@@ -16,8 +16,5 @@ const hljsEnhance = {
       $(onDocumentReady);
       }
    };
-hljsEnhance.setup();
 
-// Blogger hack
-if ($('meta[content=blogger]').length)
-   window.setInterval(hljsEnhance.setup, 2000);
+hljsEnhance.setup();
