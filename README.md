@@ -15,7 +15,7 @@ _Adds a little extra stuff to highlight.js_
 1. Adds hover effect to syntax highlighting
 
 ### Try it:
-[https://center-key.github.io/hljs-enhance/](https://center-key.github.io/hljs-enhance)
+[https://center-key.github.io/hljs-enhance](https://center-key.github.io/hljs-enhance/)
 
 ### Use it:
 [instructions.txt](https://center-key.github.io/hljs-enhance/instructions.txt)
