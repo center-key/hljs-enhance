@@ -7,7 +7,6 @@
 #     $ chmod +x *.sh.command
 
 banner="hljs-enhance"
-instructionsFile=instructions.txt
 projectHome=$(cd $(dirname $0); pwd)
 
 setupTools() {
@@ -71,18 +70,19 @@ releaseInstructions() {
    echo
    }
 
-creatLocalToCdnSubsitution() {
+createLocalToCdnSubsitution() {
    cdnUri=https://cdn.jsdelivr.net/npm/hljs-enhance@0.0
    localToCdn="s#=hljs-enhance[.]#=$cdnUri/hljs-enhance.#g"
    }
 
 generateInstructions() {
    cd $projectHome
-   echo -e "Paste the HTML below into the <head> section (after loading jQuery):\n" > $instructionsFile
+   echo -e "Paste the HTML below into the <head> section (after loading jQuery):\n" > docs/instructions.txt
    startLine=$(grep --line-number "\!\-\- \-" spec.html | head -1 | sed s/[^0-9]//g)
    endLine=$(($(grep --line-number "</head>" spec.html | sed s/[^0-9]//g) - 2))
-   sed $localToCdn spec.html | head -$endLine | tail -n +$startLine  >> $instructionsFile
-   cat $instructionsFile
+   sed $localToCdn spec.html | head -$endLine | tail -n +$startLine  >> docs/instructions.txt
+   sed $localToCdn spec.html > docs/index.html
+   cat docs/instructions.txt
    echo
    pwd
    ls -o
@@ -96,22 +96,6 @@ runTasks() {
    echo
    }
 
-publishWebFiles() {
-   cd $projectHome
-   publishWebRoot=$(grep ^DocumentRoot /private/etc/apache2/httpd.conf | awk -F'"' '{ print $2 }')
-   publishSite=$publishWebRoot/centerkey.com
-   publishFolder=$publishSite/hljs-enhance
-   publish() {
-      echo "Publishing:"
-      echo $publishFolder
-      mkdir -p $publishFolder
-      sed $localToCdn spec.html > $publishFolder/examples.html
-      ls -o $publishFolder
-      echo
-      }
-   test -w $publishSite && publish
-   }
-
 openBrowser() {
    cd $projectHome
    echo "Opening spec.html"
@@ -122,8 +106,7 @@ openBrowser() {
 
 setupTools
 releaseInstructions
-creatLocalToCdnSubsitution
+createLocalToCdnSubsitution
 generateInstructions
 runTasks
-publishWebFiles
 openBrowser

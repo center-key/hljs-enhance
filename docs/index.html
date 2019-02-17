@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>hljs-enhance &bull; Adds a little extra stuff to highlight.js</title>
+<link rel=icon       href=https://centerkey.com/graphics/bookmark.png>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.7/css/all.min.css>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/web-ignition@1.1/dist/reset.min.css>
+<script src=https://cdn.jsdelivr.net/npm/jquery@3.3/dist/jquery.min.js></script>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!--  hljs-enhance                                                         -->
+<!--  ============                                                         -->
+<!--  Adds a little extra stuff to highlight.js                            -->
+<!--  Stuff:                                                               -->
+<!--     1) Normalizes code indent to first column of display box          -->
+<!--     2) Trims whitespace around code                                   -->
+<!--     3) Adds border with option for caption (<figcaption>)             -->
+<!--     4) Adds hover effect to syntax highlighting                       -->
+<!--                                                                       -->
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14/build/styles/docco.min.css>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/hljs-enhance@0.0/hljs-enhance.css>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14/build/highlight.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/hljs-enhance@0.0/hljs-enhance.js></script>
+<!--                                                                       -->
+<!--  Style theme listing (and example css filenames):                     -->
+<!--     https://highlightjs.org/static/test.html                          -->
+<!--     default.min.css, dark.min.css, obsidian.min.css, zenburn.min.css  -->
+<!--     Example conversion of theme name to css filename:                 -->
+<!--        "Atelier Dun - Dark" ==> "atelier-dune.dark.min.css"           -->
+<!--  Usage (simple):                                                      -->
+<!--     <pre><code class=language-javascript>                             -->
+<!--        console.log('Hello');                                          -->
+<!--     </code></pre>                                                     -->
+<!--  Usage (with caption):                                                -->
+<!--     <figure>                                                          -->
+<!--        <figcaption>Hello Message</figcaption>                         -->
+<!--        <pre><code class=language-javascript>                          -->
+<!--           console.log('Hello');                                       -->
+<!--        </code></pre>                                                  -->
+<!--     </figure>                                                         -->
+<!--  Example languages:                                                   -->
+<!--     javascript, html, css, less                                       -->
+<!--  For showing HTML code, first encode at:                              -->
+<!--     https://www.convertstring.com/EncodeDecode/HtmlEncode             -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+</head>
+<body>
+
+<header>
+   <h1>hljs-enhance</h1>
+   <h2>Adds a little extra stuff to highlight.js</h2>
+   <p>
+      (Most importantly, code within the <code>&lt;code&gt;</code>
+      tags can be aligned with the surrounding HTML and still render properly.)
+   </p>
+   <a id=fork-me href=https://github.com/center-key/hljs-enhance>Fork me on GitHub</a>
+</header>
+
+<main>
+
+   <figure>
+      <figcaption>Code for Syntax Highlighting</figcaption>
+      <pre><code class=language-html>
+         &lt;pre&gt;&lt;code class=language-javascript&gt;
+            console.log(&apos;Hello&apos;);
+         &lt;/code&gt;&lt;/pre&gt;
+      </code></pre>
+   </figure>
+
+   <pre><code class=language-javascript>
+      console.log('Hello');
+   </code></pre>
+
+   <figure>
+      <figcaption>Caption Above</figcaption>
+      <pre><code class=language-javascript>
+         console.log('Hello');
+      </code></pre>
+   </figure>
+
+   <figure>
+      <pre><code class=language-javascript>
+         console.log('Hello');
+      </code></pre>
+      <figcaption>Caption Below</figcaption>
+   </figure>
+
+   <figure>
+      <figcaption>Example JavaScript</figcaption>
+      <pre><code class=language-javascript>
+         const help = {
+            selector: '.help-me',
+            show: (event) =&gt; {
+               const msg = $(event.target).data('msg');
+               $('#msg').text(msg).show().fadeOut(2000);
+               },
+            setup: () =&gt; {
+               $(document).on({ click: help.show }, help.selector);
+               }
+            };
+         $(help.setup);
+      </code></pre>
+   </figure>
+
+   <figure>
+      <figcaption>Example HTML</figcaption>
+      <pre><code class=language-html>
+         &lt;!-- Slide --&gt;
+         &lt;section&gt;
+            &lt;h3&gt;Images and Arrows&lt;/h3&gt;
+            &lt;img class=prime data-width=5% src=logo.png alt=logo&gt;
+            &lt;div class=down-arrow&gt;&lt;/div&gt;
+            &lt;img class=prime data-x=a,2.3 data-width=20%
+               src=https://dnajs.org/graphics/dnajs-logo.png alt=logo&gt;
+         &lt;/section&gt;
+      </code></pre>
+   </figure>
+
+   <figure class=hljs-enhance>
+      <figcaption>Trim Box without Code</figcaption>
+      <div>
+         Put the class <code>hljs-enhance</code> on the <code>&lt;figure&gt;</code> tag to make
+         a box with the trim even if there is no code.
+      </div>
+   </figure>
+
+</main>
+
+<footer>
+   <p>
+      <a href=https://github.com/center-key/hljs-enhance/blob/master/hljs-enhance.css>hljs-enhance.css</a>
+   </p>
+   <p>
+      <a href=https://github.com/center-key/hljs-enhance/blob/master/hljs-enhance.js>hljs-enhance.js</a>
+   </p>
+</footer>
+
+<script src=https://cdn.jsdelivr.net/npm/dna.js@1.5/dist/dna.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/web-ignition@1.1/dist/library.min.js></script>
+</body>
+</html>
