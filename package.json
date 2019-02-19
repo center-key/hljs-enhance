@@ -20,6 +20,7 @@
       "undef": true,
       "unused": true,
       "browser": true,
+      "node": true,
       "jquery": true
    },
    "scripts": {

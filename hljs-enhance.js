@@ -17,4 +17,9 @@ const hljsEnhance = {
       }
    };
 
+if (typeof module === 'object')
+   module.exports = hljsEnhance;  //node module loading system (CommonJS)
+if (typeof window === 'object')
+   window.hljsEnhance = hljsEnhance;  //support both global and window property
+
 hljsEnhance.setup();
