@@ -8,21 +8,21 @@ _Adds a little extra stuff to highlight.js_
 [![Dependencies](https://david-dm.org/center-key/hljs-enhance/status.svg)](https://david-dm.org/center-key/hljs-enhance)
 [![Build](https://travis-ci.org/center-key/hljs-enhance.svg)](https://travis-ci.org/center-key/hljs-enhance)
 
-### Stuff:
+## Stuff:
 1. Normalizes code indent to first column of display box
 1. Trims whitespace around code
 1. Adds border with option for caption (`<figcaption>`)
 1. Adds hover effect to syntax highlighting
 
-### See it:
+## See it:
 [https://center-key.github.io/hljs-enhance](https://center-key.github.io/hljs-enhance/)
 
-### Use it:
+## Use it:
 
-## From a CDN
+### From a CDN
 [instructions.txt](https://center-key.github.io/hljs-enhance/instructions.txt)
 
-## In a project
+### In a project
 ```shell
 $ npm install hljs-enhance
 ```
