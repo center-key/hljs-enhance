@@ -1,6 +1,6 @@
 {
    "name": "hljs-enhance",
-   "version": "0.0.4",
+   "version": "0.0.5",
    "description": "Adds a little extra stuff to highlight.js",
    "license": "MIT",
    "main": "hljs-enhance.js",
@@ -28,7 +28,7 @@
    },
    "devDependencies": {
       "dna.js": "~1.5",
-      "highlight.js": "~9.14",
+      "highlight.js": "~9.15",
       "jquery": "~3.3",
       "jshint": "~2.10",
       "web-ignition": "~1.1"
