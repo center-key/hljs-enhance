@@ -40,6 +40,9 @@ pre.hljs-enhance >code >span:hover {
 .hljs-tag .hljs-attribute {
    color: navy;
    }
+figure >pre {   /* ensure content fits on screen even before js runs (Google Mobile Usability) */
+   overflow-x: scroll;
+   }
 @media (max-width: 667px) {  /* selects iPhone 6/6s/7/8 landscape and anything narrower */
    pre.hljs-enhance >code { font-size: 0.6rem; }
    }
