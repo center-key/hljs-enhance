@@ -29,9 +29,9 @@
    },
    "devDependencies": {
       "dna.js": "~1.6",
-      "highlight.js": "~9.17",
+      "highlight.js": "~9.18",
       "jquery": "~3.4",
-      "jshint": "~2.10",
+      "jshint": "~2.11",
       "web-ignition": "~1.2"
    }
 }

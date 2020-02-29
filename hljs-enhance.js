@@ -1,6 +1,6 @@
 // hljs-enhance - https://github.com/center-key/hljs-enhance - MIT License
 const hljsEnhance = {
-   setup: () => {
+   setup() {
       const init = (i, elem) => {
          elem = $(elem);
          const indent = '   ';
@@ -14,7 +14,7 @@ const hljsEnhance = {
          $('figure.hljs-enhance >div').addClass('hljs');  //trim boxes without code
          };
       $(onDocumentReady);
-      }
+      },
    };
 
 if (typeof module === 'object')
