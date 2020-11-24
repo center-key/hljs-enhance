@@ -5,7 +5,6 @@ _Adds a little extra stuff to highlight.js_
 
 [![License:MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/center-key/hljs-enhance/blob/master/LICENSE.txt)
 [![npm](https://img.shields.io/npm/v/hljs-enhance.svg)](https://www.npmjs.com/package/hljs-enhance)
-[![Dependencies](https://david-dm.org/center-key/hljs-enhance/status.svg)](https://david-dm.org/center-key/hljs-enhance)
 [![Build](https://travis-ci.org/center-key/hljs-enhance.svg)](https://travis-ci.org/center-key/hljs-enhance)
 
 ## Stuff
