@@ -28,11 +28,11 @@
       "test": "jshint hljs-enhance.js"
    },
    "devDependencies": {
-      "@fortawesome/fontawesome-free": "~5.13",
+      "@fortawesome/fontawesome-free": "~5.15",
       "dna.js": "~1.6",
-      "highlight.js": "~10.1",
+      "highlight.js": "~10.4",
       "jquery": "~3.5",
-      "jshint": "~2.11",
-      "web-ignition": "~1.2"
+      "jshint": "~2.12",
+      "web-ignition": "~1.3"
    }
 }
