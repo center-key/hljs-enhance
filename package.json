@@ -29,7 +29,7 @@
    },
    "devDependencies": {
       "@fortawesome/fontawesome-free": "~5.15",
-      "dna.js": "~1.6",
+      "dna.js": "~1.7",
       "highlight.js": "~10.5",
       "jquery": "~3.5",
       "jshint": "~2.12",
