@@ -3,6 +3,7 @@
    "version": "0.0.7",
    "description": "Adds a little extra stuff to highlight.js",
    "license": "MIT",
+   "type": "module",
    "main": "hljs-enhance.js",
    "repository": "github:center-key/hljs-enhance",
    "homepage": "https://github.com/center-key/hljs-enhance",
