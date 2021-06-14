@@ -14,10 +14,10 @@ _Adds a little extra stuff to highlight.js_
 1. Adds border with option for caption (`<figcaption>`)
 1. Adds hover effect to syntax highlighting
 
-## See it
+## See It
 [https://center-key.github.io/hljs-enhance](https://center-key.github.io/hljs-enhance/)
 
-## Use it
+## Use It
 
 ### From a CDN
 [instructions.txt](https://center-key.github.io/hljs-enhance/instructions.txt)

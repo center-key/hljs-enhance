@@ -1,6 +1,6 @@
 {
    "name": "hljs-enhance",
-   "version": "1.0.0",
+   "version": "1.0.1",
    "description": "Adds a little extra stuff to highlight.js",
    "license": "MIT",
    "type": "module",
