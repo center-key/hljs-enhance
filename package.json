@@ -26,7 +26,8 @@
       "jquery": true
    },
    "scripts": {
-      "test": "jshint hljs-enhance.js"
+      "pretest": "w3c-html-validator",
+      "test": "jshint . --exclude node_modules"
    },
    "devDependencies": {
       "@fortawesome/fontawesome-free": "~5.15",
@@ -34,6 +35,7 @@
       "highlight.js": "~11.1",
       "jquery": "~3.6",
       "jshint": "~2.13",
+      "w3c-html-validator": "~0.7",
       "web-ignition": "~1.4"
    }
 }
