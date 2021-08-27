@@ -31,8 +31,8 @@
    },
    "devDependencies": {
       "@fortawesome/fontawesome-free": "~5.15",
-      "dna.js": "~1.8",
-      "highlight.js": "~11.1",
+      "dna.js": "~1.9",
+      "highlight.js": "~11.2",
       "jquery": "~3.6",
       "jshint": "~2.13",
       "w3c-html-validator": "~0.7",
