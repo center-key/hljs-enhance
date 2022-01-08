@@ -2,8 +2,8 @@
 const hljsEnhance = {
    setup() {
       const init = (node) => {
-         elem = $(node).addClass('hljs-done');
-         const indent = '   ';
+         const elem =    $(node).addClass('hljs-done');
+         const indent =  '   ';
          const padding = new RegExp(elem.text().match(/\n[ \t]+/), 'g');
          elem.text(elem.text().replace(padding, '\n').replace(/\t/g, indent).trim());
          elem.parent().addClass('hljs-enhance').closest('figure').addClass('hljs-enhance');
