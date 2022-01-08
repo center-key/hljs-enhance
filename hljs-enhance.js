@@ -1,8 +1,8 @@
 // hljs-enhance - https://github.com/center-key/hljs-enhance - MIT License
 const hljsEnhance = {
    setup() {
-      const init = (i, elem) => {
-         elem = $(elem);
+      const init = (node) => {
+         elem = $(node).addClass('hljs-done');
          const indent = '   ';
          const padding = new RegExp(elem.text().match(/\n[ \t]+/), 'g');
          elem.text(elem.text().replace(padding, '\n').replace(/\t/g, indent).trim());
@@ -10,7 +10,7 @@ const hljsEnhance = {
          window.hljs.highlightElement(elem[0]);
          };
       const onDocumentReady = () => {
-         $('pre code:not(.hljs-done)').each(init).addClass('hljs-done');
+         $('pre code:not(.hljs-done)').toArray().forEach(init);
          $('figure.hljs-enhance >div').addClass('hljs');  //trim boxes without code
          };
       $(onDocumentReady);
