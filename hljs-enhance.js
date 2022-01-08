@@ -7,7 +7,7 @@ const hljsEnhance = {
          const padding = new RegExp(elem.text().match(/\n[ \t]+/), 'g');
          elem.text(elem.text().replace(padding, '\n').replace(/\t/g, indent).trim());
          elem.parent().addClass('hljs-enhance').closest('figure').addClass('hljs-enhance');
-         window.hljs.highlightBlock(elem[0]);
+         window.hljs.highlightElement(elem[0]);
          };
       const onDocumentReady = () => {
          $('pre code:not(.hljs-done)').each(init).addClass('hljs-done');
