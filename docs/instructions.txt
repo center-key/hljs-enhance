@@ -12,7 +12,8 @@ Paste the HTML below into the <head> section (after loading jQuery):
 <!--                                                                       -->
 <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0/build/styles/docco.min.css>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/hljs-enhance@1.0/hljs-enhance.css>
-<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0/build/highlight.min.js></script>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4/build/highlight.min.js></script>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4/build/languages/http.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/hljs-enhance@1.0/hljs-enhance.js></script>
 <!--                                                                       -->
 <!--  Style theme listing (and example css filenames):                     -->

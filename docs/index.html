@@ -20,7 +20,8 @@
 <!--                                                                       -->
 <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0/build/styles/docco.min.css>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/hljs-enhance@1.0/hljs-enhance.css>
-<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0/build/highlight.min.js></script>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4/build/highlight.min.js></script>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4/build/languages/http.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/hljs-enhance@1.0/hljs-enhance.js></script>
 <!--                                                                       -->
 <!--  Style theme listing (and example css filenames):                     -->
@@ -115,6 +116,23 @@
             &lt;img class=prime data-x=a,2.3 data-width=20%
                src=https://dnajs.org/graphics/dnajs-logo.png alt=logo&gt;
          &lt;/section&gt;
+      </code></pre>
+   </figure>
+
+   <figure>
+      <figcaption>Example HTTP</figcaption>
+      <pre><code class=language-http>
+         POST /api/v1/books/3001 HTTP/1.1
+         Host: example.org
+         Content-Type: application/json; charset=utf-8
+         Content-Length: 125
+
+         {
+            "id: 3001,
+            "title": "Go JavaScript",
+            "author": "Jake",
+            "retrieved": "Thu Jan 13 2022"
+         }
       </code></pre>
    </figure>
 
