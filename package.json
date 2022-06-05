@@ -1,6 +1,6 @@
 {
    "name": "hljs-enhance",
-   "version": "1.0.4",
+   "version": "1.0.5",
    "description": "Adds a little extra stuff to highlight.js",
    "license": "MIT",
    "type": "module",
@@ -31,7 +31,7 @@
    },
    "devDependencies": {
       "@fortawesome/fontawesome-free": "~6.1",
-      "dna.js": "~1.9",
+      "dna.js": "~2.0",
       "highlight.js": "~11.5",
       "jquery": "~3.6",
       "jshint": "~2.13",
