@@ -23,7 +23,10 @@
       "unused": true,
       "browser": true,
       "node": true,
-      "jquery": true
+      "jquery": true,
+      "globals": {
+         "globalThis": true
+      }
    },
    "scripts": {
       "pretest": "html-validator",
