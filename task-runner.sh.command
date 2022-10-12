@@ -77,7 +77,7 @@ releaseInstructions() {
    }
 
 createLocalToCdnSubsitution() {
-   cdnUri=https://cdn.jsdelivr.net/npm/hljs-enhance@1.0
+   cdnUri=https://cdn.jsdelivr.net/npm/hljs-enhance@1.1
    localToCdn="s#=hljs-enhance[.]#=$cdnUri/hljs-enhance.#g"
    }
 
