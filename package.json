@@ -16,17 +16,14 @@
       "syntax-highlighting"
    ],
    "jshintConfig": {
-      "esversion": 9,
+      "esversion": 11,
       "strict": "implied",
       "eqeqeq": true,
       "undef": true,
       "unused": true,
       "browser": true,
       "node": true,
-      "jquery": true,
-      "globals": {
-         "globalThis": true
-      }
+      "jquery": true
    },
    "scripts": {
       "pretest": "html-validator",
@@ -38,7 +35,7 @@
       "highlight.js": "~11.6",
       "jquery": "~3.6",
       "jshint": "~2.13",
-      "w3c-html-validator": "~1.1",
+      "w3c-html-validator": "~1.2",
       "web-ignition": "~1.5"
    }
 }
