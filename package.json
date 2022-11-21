@@ -36,6 +36,6 @@
       "jquery": "~3.6",
       "jshint": "~2.13",
       "w3c-html-validator": "~1.2",
-      "web-ignition": "~1.5"
+      "web-ignition": "~1.6"
    }
 }
