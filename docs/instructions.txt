@@ -11,10 +11,10 @@ Paste the HTML below into the <head> section:
 <!--     4) Adds hover effect to syntax highlighting                       -->
 <!--                                                                       -->
 <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8/build/styles/docco.min.css>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/hljs-enhance@1.1/hljs-enhance.css>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/hljs-enhance@2.0/hljs-enhance.css>
 <script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8/build/highlight.min.js></script>
 <script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8/build/languages/http.min.js></script>
-<script src=https://cdn.jsdelivr.net/npm/hljs-enhance@1.1/hljs-enhance.js></script>
+<script src=https://cdn.jsdelivr.net/npm/hljs-enhance@2.0/hljs-enhance.js></script>
 <!--                                                                       -->
 <!--  Style theme listing (and example css filenames):                     -->
 <!--     https://highlightjs.org/static/demo                               -->
