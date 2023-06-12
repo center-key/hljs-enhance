@@ -83,7 +83,7 @@ createLocalToCdnSubsitution() {
 
 generateInstructions() {
    cd $projectHome
-   echo -e "Paste the HTML below into the <head> section (after loading jQuery):\n" > docs/instructions.txt
+   echo -e "Paste the HTML below into the <head> section:\n" > docs/instructions.txt
    startLine=$(grep --line-number "\!\-\- \-" spec.html | head -1 | sed s/[^0-9]//g)
    endLine=$(($(grep --line-number "</head>" spec.html | sed s/[^0-9]//g) - 2))
    sed $localToCdn spec.html | head -$endLine | tail -n +$startLine  >> docs/instructions.txt

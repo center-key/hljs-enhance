@@ -22,8 +22,7 @@
       "undef": true,
       "unused": true,
       "browser": true,
-      "node": true,
-      "jquery": true
+      "node": true
    },
    "scripts": {
       "pretest": "html-validator",
@@ -31,11 +30,10 @@
    },
    "devDependencies": {
       "@fortawesome/fontawesome-free": "~6.4",
-      "dna-engine": "~2.3",
+      "dna-engine": "~3.0",
       "highlight.js": "~11.8",
-      "jquery": "~3.7",
       "jshint": "~2.13",
       "w3c-html-validator": "~1.3",
-      "web-ignition": "~1.7"
+      "web-ignition": "~2.0"
    }
 }

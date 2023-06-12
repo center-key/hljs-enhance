@@ -1,4 +1,4 @@
-Paste the HTML below into the <head> section (after loading jQuery):
+Paste the HTML below into the <head> section:
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <!--  hljs-enhance                                                         -->

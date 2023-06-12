@@ -5,8 +5,7 @@
 <title>hljs-enhance &bull; Adds a little extra stuff to highlight.js</title>
 <link rel=icon       href=https://centerkey.com/graphics/bookmark.png>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4/css/all.min.css>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/web-ignition@1.7/dist/reset.min.css>
-<script src=https://cdn.jsdelivr.net/npm/jquery@3.7/dist/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/web-ignition@2.0/dist/reset.min.css>
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <!--  hljs-enhance                                                         -->
@@ -93,15 +92,17 @@
       <pre><code class=language-javascript>
          const help = {
             selector: '.help-me',
-            show: (event) =&gt; {
-               const msg = $(event.target).data('msg');
-               $('#msg').text(msg).show().fadeOut(2000);
+            show(elem) {
+               const msg =  elem.dataset.title;
+               document.getElementById('message').textContent = msg;
                },
-            setup: () =&gt; {
-               $(document).on({ click: help.show }, help.selector);
-               }
+            setup() {
+               const listener = (event) =>
+                  event.target.matches(help.selector) && help.show(event.target);
+               document.addEventListener('click', (event) => help.show);
+               },
             };
-         $(help.setup);
+         help.setup();
       </code></pre>
    </figure>
 
@@ -154,7 +155,7 @@
    </p>
 </footer>
 
-<script src=https://cdn.jsdelivr.net/npm/dna-engine@2.3/dist/dna-engine.min.js></script>
-<script src=https://cdn.jsdelivr.net/npm/web-ignition@1.7/dist/lib-x.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/dna-engine@3.0/dist/dna-engine.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/web-ignition@2.0/dist/lib-x.min.js></script>
 </body>
 </html>

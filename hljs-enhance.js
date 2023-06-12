@@ -1,24 +1,36 @@
 // hljs-enhance - https://github.com/center-key/hljs-enhance - MIT License
+
 const hljsEnhance = {
+
    setup() {
-      const init = (node) => {
-         const elem =    $(node).addClass('hljs-done');
-         const indent =  '   ';
-         const padding = new RegExp(elem.text().match(/\n[ \t]+/), 'g');
-         elem.text(elem.text().replace(padding, '\n').replace(/\t/g, indent).trim());
-         elem.parent().addClass('hljs-enhance').closest('figure').addClass('hljs-enhance');
-         globalThis.hljs.highlightElement(elem[0]);
+      // <figure class=hljs-enhance>
+      //    <figcaption>Title</figcaption>
+      //    <pre><code class="language-javascript hljs hljs-done>
+      //       ...
+      const init = (elem) => {
+         const indent =     '   ';
+         const padding =    new RegExp(elem.textContent.match(/\n[ \t]+/), 'g');
+         elem.textContent = elem.textContent.replace(padding, '\n').replace(/\t/g, indent).trim();
+         elem.parentElement.classList.add('hljs-enhance');
+         elem.closest('figure')?.classList.add('hljs-enhance');
+         globalThis.hljs.highlightElement(elem);
+         elem.classList.add('hljs-done');
          };
-      const onDocumentReady = () => {
-         $('pre code:not(.hljs-done)').toArray().forEach(init);
-         $('figure.hljs-enhance >div').addClass('hljs');  //trim boxes without code
-         };
-      $(onDocumentReady);
+      globalThis.document.querySelectorAll('pre code:not(.hljs-done)').forEach(init);
+      globalThis.document.querySelectorAll('figure.hljs-enhance >div')
+         .forEach(elem => elem.classList.add('hljs'));  //trim boxes without code
       },
+
+   onDomReady(callback) {
+      const state = globalThis.document?.readyState;
+      if (state === 'complete' || !state)
+         callback();
+      else
+         globalThis.window.addEventListener('DOMContentLoaded', callback);
+      return state;
+      },
+
    };
 
-if (typeof module === 'object')
-   module.exports = hljsEnhance;  //node module loading system (CommonJS)
 globalThis.hljsEnhance = hljsEnhance;
-
-hljsEnhance.setup();
+hljsEnhance.onDomReady(hljsEnhance.setup);
