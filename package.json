@@ -5,7 +5,10 @@
    "license": "MIT",
    "type": "module",
    "main": "hljs-enhance.js",
-   "repository": "github:center-key/hljs-enhance",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/center-key/hljs-enhance.git"
+   },
    "homepage": "https://github.com/center-key/hljs-enhance",
    "bugs": "https://github.com/center-key/hljs-enhance/issues",
    "docs": "https://github.com/center-key/hljs-enhance#readme",
@@ -33,7 +36,7 @@
       "dna-engine": "~3.0",
       "highlight.js": "~11.8",
       "jshint": "~2.13",
-      "w3c-html-validator": "~1.4",
+      "w3c-html-validator": "~1.5",
       "web-ignition": "~2.0"
    }
 }
