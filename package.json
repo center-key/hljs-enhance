@@ -4,7 +4,8 @@
    "description": "Adds a little extra stuff to highlight.js",
    "license": "MIT",
    "type": "module",
-   "main": "hljs-enhance.js",
+   "module": "hljs-enhance.js",
+   "browser": "hljs-enhance.js",
    "repository": {
       "type": "git",
       "url": "git+https://github.com/center-key/hljs-enhance.git"
