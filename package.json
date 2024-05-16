@@ -34,10 +34,10 @@
    },
    "devDependencies": {
       "@fortawesome/fontawesome-free": "~6.5",
-      "dna-engine": "~3.1",
+      "dna-engine": "~3.2",
       "highlight.js": "~11.9",
       "jshint": "~2.13",
-      "w3c-html-validator": "~1.6",
+      "w3c-html-validator": "~1.8",
       "web-ignition": "~2.1"
    }
 }
