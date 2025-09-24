@@ -24,9 +24,9 @@ const hljsEnhance = {
    onDomReady(callback) {
       const state = globalThis.document?.readyState;
       if (state === 'complete' || !state)
-         callback();
+         globalThis.setTimeout(callback);
       else
-         globalThis.window.addEventListener('DOMContentLoaded', callback);
+         globalThis.document.addEventListener('DOMContentLoaded', callback);
       return state;
       },
 

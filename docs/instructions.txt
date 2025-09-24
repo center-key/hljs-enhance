@@ -23,13 +23,13 @@ Paste the HTML below into the <head> section:
 <!--        "Atom One Dark" ===> atom-one-dark.min.css                     -->
 <!--  Usage (simple):                                                      -->
 <!--     <pre><code class=language-javascript>                             -->
-<!--        console.log('Hello');                                          -->
+<!--        console.info('Hello');                                         -->
 <!--     </code></pre>                                                     -->
 <!--  Usage (with caption):                                                -->
 <!--     <figure>                                                          -->
 <!--        <figcaption>Hello Message</figcaption>                         -->
 <!--        <pre><code class=language-javascript>                          -->
-<!--           console.log('Hello');                                       -->
+<!--           console.info('Hello');                                      -->
 <!--        </code></pre>                                                  -->
 <!--     </figure>                                                         -->
 <!--  Example languages:                                                   -->
