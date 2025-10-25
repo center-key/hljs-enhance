@@ -33,7 +33,7 @@
       "test": "jshint . --exclude-path .gitignore"
    },
    "devDependencies": {
-      "@fortawesome/fontawesome-free": "~7.0",
+      "@fortawesome/fontawesome-free": "~7.1",
       "dna-engine": "~3.3",
       "highlight.js": "~11.11",
       "jshint": "~2.13",
