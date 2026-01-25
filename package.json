@@ -28,16 +28,35 @@
       "browser": true,
       "node": true
    },
+   "replacerConfig": {
+      "macros": {
+         "instructions": "Paste the HTML below into the <head> section:\n"
+      }
+   },
+   "runScriptsConfig": {
+      "clean": [
+         "rimraf docs"
+      ],
+      "publish": [
+         "replacer src/website           docs",
+         "replacer src/hljs-enhance.html docs --rename=instructions.txt --header={{macro:instructions}}",
+         "replacer --virtual-input .     docs --rename=robots.txt --content=#{{space}}Allow{{space}}bots"
+      ]
+   },
    "scripts": {
-      "pretest": "html-validator spec.html docs",
-      "test": "jshint . --exclude-path .gitignore"
+      "pretest": "run-scripts clean publish",
+      "test": "jshint . --exclude-path .gitignore",
+      "posttest": "html-validator spec.html docs"
    },
    "devDependencies": {
       "@fortawesome/fontawesome-free": "~7.1",
       "dna-engine": "~3.3",
       "highlight.js": "~11.11",
       "jshint": "~2.13",
-      "w3c-html-validator": "~2.0",
-      "web-ignition": "~2.4"
+      "replacer-util": "~1.5",
+      "rimraf": "~6.1",
+      "run-scripts-util": "~1.3",
+      "w3c-html-validator": "~2.2",
+      "web-ignition": "~2.5"
    }
 }

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>hljs-enhance &bull; Adds a little extra stuff to highlight.js</title>
+<link rel=icon       href=https://centerkey.com/graphics/bookmark-icon.png>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@{{package.devDependencies.-fortawesome-fontawesome-free|version}}/css/all.min.css>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/web-ignition@{{package.devDependencies.web-ignition|version}}/dist/reset.min.css>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/dna-engine@{{package.devDependencies.dna-engine|version}}/dist/dna-engine.css>
+<script defer src=https://cdn.jsdelivr.net/npm/web-ignition@{{package.devDependencies.web-ignition|version}}/dist/lib-x.min.js></script>
+<script defer src=https://cdn.jsdelivr.net/npm/dna-engine@{{package.devDependencies.dna-engine|version}}/dist/dna-engine.min.js></script>
+
+{% render 'src/hljs-enhance.html' %}
+</head>
+<body>
+
+<header>
+   <h1>hljs-enhance</h1>
+   <h2>Adds a little extra stuff to highlight.js</h2>
+   <p>
+      (Most importantly, code within the <code>&lt;code&gt;</code>
+      tags can be aligned with the surrounding HTML and still render properly.)
+   </p>
+   <a id=fork-me href=https://github.com/center-key/hljs-enhance>Fork me on GitHub</a>
+</header>
+
+<main>
+
+   <figure>
+      <figcaption>Code for Syntax Highlighting</figcaption>
+      <pre><code class=language-html>
+         &lt;pre&gt;&lt;code class=language-javascript&gt;
+            console.info(&apos;Hello&apos;);
+         &lt;/code&gt;&lt;/pre&gt;
+      </code></pre>
+   </figure>
+
+   <pre><code class=language-javascript>
+      console.info('Hello');
+   </code></pre>
+
+   <figure>
+      <figcaption>Caption Above</figcaption>
+      <pre><code class=language-javascript>
+         console.info('Hello');
+      </code></pre>
+   </figure>
+
+   <figure>
+      <pre><code class=language-javascript>
+         console.info('Hello');
+      </code></pre>
+      <figcaption>Caption Below</figcaption>
+   </figure>
+
+   <figure>
+      <figcaption>Example JavaScript</figcaption>
+      <pre><code class=language-javascript>
+         const help = {
+            selector: '.help-me',
+            show(elem) {
+               const msg =  elem.dataset.title;
+               document.getElementById('message').textContent = msg;
+               },
+            setup() {
+               const listener = (event) =>
+                  event.target.matches(help.selector) && help.show(event.target);
+               document.addEventListener('click', (event) => help.show);
+               },
+            };
+         help.setup();
+      </code></pre>
+   </figure>
+
+   <figure>
+      <figcaption>Example HTML</figcaption>
+      <pre><code class=language-html>
+         &lt;!-- Slide --&gt;
+         &lt;section&gt;
+            &lt;h3&gt;Images and Arrows&lt;/h3&gt;
+            &lt;img class=prime data-width=5% src=logo.png alt=logo&gt;
+            &lt;div class=down-arrow&gt;&lt;/div&gt;
+            &lt;img class=prime data-x=a,2.3 data-width=20%
+               src=https://dna-engine.org/graphics/dna-logo.png alt=logo&gt;
+         &lt;/section&gt;
+      </code></pre>
+   </figure>
+
+   <figure>
+      <figcaption>Example HTTP</figcaption>
+      <pre><code class=language-http>
+         POST /api/v1/books/3001 HTTP/1.1
+         Host: example.org
+         Content-Type: application/json; charset=utf-8
+         Content-Length: 125
+
+         {
+            "id": 3001,
+            "title": "Go JavaScript",
+            "author": "Jake"
+         }
+      </code></pre>
+   </figure>
+
+   <figure class=hljs-enhance>
+      <figcaption>Trim Box without Code</figcaption>
+      <div>
+         Put the class <code>hljs-enhance</code> on the <code>&lt;figure&gt;</code> tag to make
+         a box with the trim even if there is no code.
+      </div>
+   </figure>
+
+</main>
+
+<footer>
+   <p>
+      <a href=https://github.com/center-key/hljs-enhance/blob/main/hljs-enhance.css>hljs-enhance.css</a>
+   </p>
+   <p>
+      <a href=https://github.com/center-key/hljs-enhance/blob/main/hljs-enhance.js>hljs-enhance.js</a>
+   </p>
+</footer>
+
+</body>
+</html>
