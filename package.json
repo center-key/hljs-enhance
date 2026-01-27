@@ -4,8 +4,11 @@
    "description": "Adds a little extra stuff to highlight.js",
    "license": "MIT",
    "type": "module",
-   "module": "hljs-enhance.js",
-   "browser": "hljs-enhance.js",
+   "module": "dist/hljs-enhance.js",
+   "browser": "dist/hljs-enhance.js",
+   "files": [
+      "dist"
+   ],
    "repository": {
       "type": "git",
       "url": "git+https://github.com/center-key/hljs-enhance.git"
@@ -28,32 +31,40 @@
       "browser": true,
       "node": true
    },
-   "replacerConfig": {
+   "cliConfig": {
       "macros": {
-         "instructions": "Paste the HTML below into the <head> section:\n"
+         "instructions": "Paste the HTML below into the <head> section of your web page:\n",
+         "cdn": "/https:..cdn.jsdelivr.net.npm.hljs-enhance@[0-9.]+/g"
       }
    },
    "runScriptsConfig": {
       "clean": [
-         "rimraf docs"
+         "rimraf dist docs"
+      ],
+      "dist": [
+         "add-dist-header src --ext=.css,.js dist",
+         "replacer src/hljs-enhance.html     dist"
       ],
       "publish": [
          "replacer src/website           docs",
          "replacer src/hljs-enhance.html docs --rename=instructions.txt --header={{macro:instructions}}",
-         "replacer --virtual-input .     docs --rename=robots.txt --content=#{{space}}Allow{{space}}bots"
+         "replacer --virtual-input .     docs --rename=robots.txt --content=#{{space}}Allow{{space}}bots",
+         "replacer docs/index.html       docs --rename=spec.html --regex={{macro:cdn}} --replacement=.."
       ]
    },
    "scripts": {
-      "pretest": "run-scripts clean publish",
+      "pretest": "run-scripts clean dist publish",
       "test": "jshint . --exclude-path .gitignore",
-      "posttest": "html-validator spec.html docs"
+      "validate-html": "html-validator docs"
    },
    "devDependencies": {
       "@fortawesome/fontawesome-free": "~7.1",
+      "add-dist-header": "~1.6",
+      "copy-file-util": "~1.3",
       "dna-engine": "~3.3",
       "highlight.js": "~11.11",
       "jshint": "~2.13",
-      "replacer-util": "~1.5",
+      "replacer-util": "~1.6",
       "rimraf": "~6.1",
       "run-scripts-util": "~1.3",
       "w3c-html-validator": "~2.2",

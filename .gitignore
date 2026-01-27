@@ -2,6 +2,7 @@
 
 # Downloaded and Generated Files
 /node_modules/
+/docs/
 /package-lock.json
 
 # Extraneous System Files

@@ -57,15 +57,17 @@
       <figcaption>Example JavaScript</figcaption>
       <pre><code class=language-javascript>
          const help = {
+            // Clicking a designated element sets its title as the
+            // text of the message element.
             selector: '.help-me',
             show(elem) {
-               const msg =  elem.dataset.title;
-               document.getElementById('message').textContent = msg;
+               const message = elem.dataset.title;
+               document.getElementById('message').textContent = message;
                },
             setup() {
-               const listener = (event) =>
+               const showHelp = (event) =>
                   event.target.matches(help.selector) && help.show(event.target);
-               document.addEventListener('click', (event) => help.show);
+               document.addEventListener('click', showHelp);
                },
             };
          help.setup();
@@ -114,10 +116,10 @@
 
 <footer>
    <p>
-      <a href=https://github.com/center-key/hljs-enhance/blob/main/hljs-enhance.css>hljs-enhance.css</a>
+      <a href=https://github.com/center-key/hljs-enhance/blob/main/dist/hljs-enhance.css>hljs-enhance.css</a>
    </p>
    <p>
-      <a href=https://github.com/center-key/hljs-enhance/blob/main/hljs-enhance.js>hljs-enhance.js</a>
+      <a href=https://github.com/center-key/hljs-enhance/blob/main/dist/hljs-enhance.js>hljs-enhance.js</a>
    </p>
 </footer>
 

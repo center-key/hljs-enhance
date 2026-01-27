@@ -79,43 +79,24 @@ releaseInstructions() {
    echo
    }
 
-createLocalToCdnSubsitution() {
-   cdnUri=https://cdn.jsdelivr.net/npm/hljs-enhance@2.0
-   localToCdn="s#=hljs-enhance[.]#=$cdnUri/hljs-enhance.#g"
-   }
-
-generateInstructions() {
-   cd $projectHome
-   echo -e "Paste the HTML below into the <head> section:\n" > docs/instructions.txt
-   startLine=$(grep --line-number "\!\-\- \-" spec.html | head -1 | sed s/[^0-9]//g)
-   endLine=$(($(grep --line-number "</head>" spec.html | sed s/[^0-9]//g) - 2))
-   sed $localToCdn spec.html | head -$endLine | tail -n +$startLine  >> docs/instructions.txt
-   sed $localToCdn spec.html > docs/index.html
-   cat docs/instructions.txt
-   echo
-   pwd
-   ls -o
-   echo
-   }
-
 runTasks() {
    cd $projectHome
    echo "Tasks:"
    npm test
+   npm run validate-html
    echo
    }
 
 openBrowser() {
    cd $projectHome
-   echo "Opening spec.html"
+   spec=docs/spec.html
+   echo "Opening $spec"
    sleep 2
-   open spec.html
+   open $spec
    echo
    }
 
 setupTools
 releaseInstructions
-createLocalToCdnSubsitution
-generateInstructions
 runTasks
 openBrowser

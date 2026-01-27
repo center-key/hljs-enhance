@@ -6,6 +6,7 @@ _Adds a little extra stuff to highlight.js_
 [![License:MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/center-key/hljs-enhance/blob/main/LICENSE.txt)
 [![npm](https://img.shields.io/npm/v/hljs-enhance.svg)](https://www.npmjs.com/package/hljs-enhance)
 [![Build](https://github.com/center-key/hljs-enhance/actions/workflows/run-spec-on-push.yaml/badge.svg)](https://github.com/center-key/hljs-enhance/actions/workflows/run-spec-on-push.yaml)
+[![Publish Website](https://github.com/center-key/hljs-enhance/actions/workflows/publish-website.yaml/badge.svg)](https://github.com/center-key/hljs-enhance/actions/workflows/publish-website.yaml)
 
 ## Stuff
 1. Normalizes code indent to first column of display box

@@ -1,4 +1,5 @@
-/* hljs-enhance - https://github.com/center-key/hljs-enhance - MIT License */
+/* hljs-enhance - MIT License */
+
 figure.hljs-enhance {
    text-align: left;
    margin: 0px auto 20px auto;
@@ -7,6 +8,11 @@ figure.hljs-enhance >figcaption {
    font-size: 0.9rem;  /* caption font size */
    font-weight: bold;
    padding: 0.32em 0px 0.0em 18px;
+   }
+figure.hljs-enhance >pre+figcaption {
+   text-align: center;
+   font-weight: normal;
+   padding: 3px 0px;
    }
 pre.hljs-enhance,
 figure.hljs-enhance >div {
@@ -52,3 +58,4 @@ figure.hljs-enhance >figcaption             { color:            darkslategray; }
 figure.hljs-enhance >figcaption:first-child { background-color: lightsteelblue; }  /* trim */
 pre.hljs-enhance, figure.hljs-enhance >div  { border-color:     lightsteelblue; }  /* trim */
 pre.hljs-enhance >code                      { background-color: ghostwhite; }      /* background */
+@media (prefers-color-scheme: dark) { figure.hljs-enhance >pre+figcaption { color: gainsboro; } }  /* title */
