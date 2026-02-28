@@ -58,10 +58,10 @@
       "validate-html": "html-validator docs"
    },
    "devDependencies": {
-      "@fortawesome/fontawesome-free": "~7.1",
+      "@fortawesome/fontawesome-free": "~7.2",
       "add-dist-header": "~1.6",
       "copy-file-util": "~1.3",
-      "dna-engine": "~3.3",
+      "dna-dom": "~3.3",
       "highlight.js": "~11.11",
       "jshint": "~2.13",
       "replacer-util": "~1.6",
