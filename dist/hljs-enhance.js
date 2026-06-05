@@ -1,4 +1,4 @@
-//! hljs-enhance v2.1.0 ~~ https://github.com/center-key/hljs-enhance ~~ MIT License
+//! hljs-enhance v2.1.1 ~~ https://github.com/center-key/hljs-enhance ~~ MIT License
 
 const hljsEnhance = {
 

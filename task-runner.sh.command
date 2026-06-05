@@ -16,8 +16,8 @@ setupTools() {
    echo $banner
    echo $(echo $banner | sed s/./=/g)
    pwd
-   test -d .git || { echo "Project must be in a git repository."; exit; }
-   git restore dist/* &>/dev/null
+   [ -d .git ] || { echo "Project must be in a git repository."; exit; }
+   [ -d dist ] && git restore dist
    git pull --ff-only
    echo
    echo "Node.js:"
@@ -73,6 +73,7 @@ releaseInstructions() {
       echo "   git remote --verbose"
       echo "   git push origin --tags"
       echo "   npm whoami"
+      echo "   npm token"
       echo "   npm publish"
       }
    test "$version" ">" "$released" && nextActionCommitTagPub || nextActionBump
