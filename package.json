@@ -1,6 +1,6 @@
 {
    "name": "hljs-enhance",
-   "version": "2.1.1",
+   "version": "2.1.2",
    "description": "Adds a little extra stuff to highlight.js",
    "license": "MIT",
    "type": "module",
@@ -58,15 +58,15 @@
       "validate-html": "html-validator docs"
    },
    "devDependencies": {
-      "@fortawesome/fontawesome-free": "~7.2",
+      "@fortawesome/fontawesome-free": "~7.3",
       "add-dist-header": "~1.6",
       "copy-file-util": "~1.3",
       "dna-dom": "~3.3",
-      "highlight.js": "~11.11",
+      "highlight.js": "~11.12",
       "jshint": "~2.13",
       "replacer-util": "~1.6",
       "rimraf": "~6.1",
-      "run-scripts-util": "~1.3",
+      "run-scripts-util": "~1.4",
       "w3c-html-validator": "~2.2",
       "web-ignition": "~2.5"
    }
